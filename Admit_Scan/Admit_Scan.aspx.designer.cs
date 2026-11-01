@@ -96,6 +96,15 @@ namespace Admit_Scan
         protected global::System.Web.UI.WebControls.Panel pnlStudentDetails;
 
         /// <summary>
+        /// ImgStudentPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgStudentPhoto;
+
+        /// <summary>
         /// TxtStudentName control.
         /// </summary>
         /// <remarks>

@@ -67,14 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdmitFlow_Emblem1-Photoroom.png" />
-    <Content Include="AdmitFlow_Emblem1.png" />
     <Content Include="Admit_Scan.aspx" />
     <Content Include="Admit_Scan.css" />
-    <Content Include="download %281%29.jpeg" />
-    <Content Include="Gothic Library Without a Chandelier.png" />
-    <Content Include="Hero1.jpg" />
-    <Content Include="Header_Logo.png" />
+    <Content Include="Modern Glass Campus at Dusk.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
