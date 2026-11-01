@@ -1,0 +1,575 @@
+﻿/* =========================================================
+   ADMITFLOW - VINTAGE GOTHIC ADMISSION SYSTEM
+   Theme: Royal Library | Dark Noir | Antique Gold
+========================================================= */
+
+
+/* ================= ROOT VARIABLES ================= */
+
+:root {
+    --gold: #c49a50;
+    --gold-light: #f0cf87;
+    --gold-dark: #80602e;
+    --ivory: #e8dcc5;
+    --muted: #b6a58a;
+    --border: rgba(196,154,80,0.65);
+    --border-light: rgba(196,154,80,0.25);
+    --glass: rgba(10,8,6,0.78);
+    --glass-light: rgba(20,15,10,0.72);
+    --input-bg: rgba(0,0,0,0.55);
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient( rgba(0,0,0,0.48), rgba(0,0,0,0.68) ), url('Gothic Library Without a Chandelier.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--ivory);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.main-container {
+    width: 94%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 45px 0 80px;
+}
+
+
+/* ================= HEADER ================= */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.brand-emblem {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    object-fit: contain;
+}
+
+.page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 58px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    line-height: 1.05;
+    color: #e9bd6d;
+    background: linear-gradient( 180deg, #fff0b5 0%, #e8b95e 40%, #a8752c 75%, #f4d28a 100% );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow( 0 3px 3px rgba(0,0,0,0.9) );
+}
+
+.brand-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #e6b85f;
+    margin-top: 2px;
+    text-shadow: 0 2px 5px #000;
+}
+
+.header-divider {
+    width: 230px;
+    height: 1px;
+    margin: 22px auto;
+    background: linear-gradient( to right, transparent, var(--gold), transparent );
+}
+
+.brand-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #e9c47e;
+    text-shadow: 0 2px 5px #000;
+}
+
+
+/* ================= GLASS SECTIONS ================= */
+
+.glass-section {
+    width: 100%;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.65), inset 0 0 25px rgba(196,154,80,0.035);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+}
+
+
+    /* Decorative corners */
+
+    .glass-section::before,
+    .glass-section::after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        pointer-events: none;
+    }
+
+    .glass-section::before {
+        top: 8px;
+        left: 8px;
+        border-top: 1px solid var(--gold);
+        border-left: 1px solid var(--gold);
+    }
+
+    .glass-section::after {
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid var(--gold);
+        border-bottom: 1px solid var(--gold);
+    }
+
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-kicker {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(21px, 3vw, 29px);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+}
+
+    .section-heading h2 i {
+        margin-right: 10px;
+        font-size: 22px;
+    }
+
+.section-heading p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: var(--muted);
+}
+
+
+/* ================= UPLOAD GRID ================= */
+
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* ================= UPLOAD CARD ================= */
+
+.upload-card {
+    min-height: 185px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--glass-light);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+    .upload-card:hover {
+        border-color: var(--gold);
+        background: rgba(40,29,15,0.75);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .upload-card > i {
+        font-size: 32px;
+        color: var(--gold);
+        margin-bottom: 15px;
+    }
+
+    .upload-card h3 {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: var(--gold-light);
+        margin-bottom: 18px;
+    }
+
+
+/* ================= FILE INPUT ================= */
+
+.file-input {
+    width: 100%;
+    max-width: 270px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--ivory);
+}
+
+    .file-input::file-selector-button {
+        padding: 9px 14px;
+        margin-right: 10px;
+        background: rgba(196,154,80,0.15);
+        color: var(--gold-light);
+        border: 1px solid var(--gold-dark);
+        font-family: 'Cinzel', serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .file-input::file-selector-button:hover {
+            background: var(--gold-dark);
+            color: #fff;
+        }
+
+
+/* ================= SCAN BUTTON ================= */
+
+.scan-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.scan-button {
+    min-width: 260px;
+    padding: 16px 35px;
+    background: linear-gradient( 135deg, #8b652e, #c49a50, #80602e );
+    color: #100d08;
+    border: 1px solid var(--gold-light);
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+    .scan-button:hover {
+        transform: translateY(-3px);
+        background: linear-gradient( 135deg, #c49a50, #f0cf87, #a77b39 );
+        box-shadow: 0 8px 25px rgba(196,154,80,0.25);
+    }
+
+
+/* ================= SCAN STATUS ================= */
+
+.scan-status {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.scan-status-label {
+    font-family: 'Special Elite', cursive;
+    font-size: 15px;
+    color: var(--gold-light);
+}
+
+
+/* ================= FORM GRID ================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .form-group label {
+        font-family: 'Cinzel', serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        color: var(--gold-light);
+    }
+
+
+    /* ================= INPUT FIELDS ================= */
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group input[type="email"],
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        min-height: 47px;
+        padding: 12px 15px;
+        background: var(--input-bg);
+        border: 1px solid var(--border-light);
+        outline: none;
+        color: var(--ivory);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(196,154,80,0.15);
+            background: rgba(0,0,0,0.75);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #877963;
+        }
+
+
+    /* Date input */
+
+    .form-group input[type="date"] {
+        color-scheme: dark;
+    }
+
+
+/* ================= FULL WIDTH ================= */
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* ================= RADIO BUTTONS ================= */
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+    .radio-group input[type="radio"] {
+        accent-color: var(--gold);
+        margin-right: 7px;
+    }
+
+    .radio-group label {
+        display: inline-flex;
+        align-items: center;
+        color: var(--ivory);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+
+/* ================= ACADEMIC DETAILS ================= */
+
+.academic-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.academic-box {
+    padding: 25px;
+    background: rgba(0,0,0,0.38);
+    border: 1px solid var(--border-light);
+}
+
+    .academic-box h3 {
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-size: 17px;
+        letter-spacing: 2px;
+        color: var(--gold-light);
+        padding-bottom: 18px;
+        margin-bottom: 22px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .academic-box .form-group {
+        margin-bottom: 22px;
+    }
+
+        .academic-box .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+.session-field {
+    margin-top: 28px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ================= SAVE BUTTON ================= */
+
+.save-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.save-button {
+    min-width: 280px;
+    padding: 16px 30px;
+    background: transparent;
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .save-button:hover {
+        background: var(--gold);
+        color: #100d08;
+        box-shadow: 0 5px 25px rgba(196,154,80,0.2);
+    }
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media screen and (max-width: 1000px) {
+
+    .upload-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .glass-section {
+        padding: 30px 25px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .main-container {
+        width: 94%;
+        padding-top: 25px;
+    }
+
+    .brand-emblem {
+        width: 100px;
+        height: 100px;
+    }
+
+    .page-header h1 {
+        letter-spacing: 5px;
+    }
+
+    .brand-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .brand-tagline {
+        font-size: 12px;
+    }
+
+    .glass-section {
+        padding: 25px 17px;
+    }
+
+    .upload-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .radio-group {
+        gap: 15px;
+    }
+
+    .scan-button,
+    .save-button {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080604;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--gold);
+    }
+
+
+/* ================= SELECTION ================= */
+
+::selection {
+    background: var(--gold);
+    color: #080604;
+}
