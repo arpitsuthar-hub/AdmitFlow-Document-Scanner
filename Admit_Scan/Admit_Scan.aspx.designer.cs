@@ -69,6 +69,15 @@ namespace Admit_Scan
         protected global::System.Web.UI.WebControls.FileUpload FileUpload5;
 
         /// <summary>
+        /// FileUpload6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload6;
+
+        /// <summary>
         /// BtnScan control.
         /// </summary>
         /// <remarks>

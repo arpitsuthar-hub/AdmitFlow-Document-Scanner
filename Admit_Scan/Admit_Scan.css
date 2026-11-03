@@ -1,30 +1,32 @@
 ﻿/* =========================================================
-   ADMITFLOW - MODERN GLASS CAMPUS
-   Theme: Blue Hour | Glassmorphism | Modern Education
+   ADMITFLOW
+   STUDENT ADMISSION & RECORDS MANAGEMENT SYSTEM
+
+   DESIGN:
+   Gothic Royal Library
+   Dark Academia
+   Antique Gold
 ========================================================= */
-
-
-/* ================= ROOT VARIABLES ================= */
-
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
 :root {
-    --primary: #1685e8;
-    --primary-light: #62c5ff;
-    --primary-dark: #0754a6;
-    --cyan: #58d5ff;
-    --blue-glow: rgba(40, 157, 255, 0.45);
-    --white: #ffffff;
-    --text-light: #eaf5ff;
-    --text-muted: #c4d7eb;
-    --glass: rgba(213, 234, 255, 0.20);
-    --glass-light: rgba(225, 241, 255, 0.19);
-    --border: rgba(255, 255, 255, 0.42);
-    --border-light: rgba(255, 255, 255, 0.23);
-    --input-bg: rgba(8, 35, 68, 0.42);
-    --shadow: 0 15px 45px rgba(4, 25, 55, 0.25);
+    --gold: #c49a50;
+    --gold-light: #f0cf87;
+    --gold-dark: #80602e;
+    --ivory: #eee4d0;
+    --text-light: #d8c9ae;
+    --text-muted: #a99b83;
+    --dark: #090807;
+    --panel-bg: rgba(12, 10, 8, 0.89);
+    --panel-border: rgba(196, 154, 80, 0.55);
+    --input-bg: rgba(0, 0, 0, 0.65);
 }
 
 
-/* ================= RESET ================= */
+/* =========================================================
+   02. RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -38,887 +40,778 @@ html {
 
 body {
     min-height: 100vh;
-    background: linear-gradient( 180deg, rgba(8, 29, 60, 0.18), rgba(9, 39, 73, 0.30), rgba(5, 24, 48, 0.55) ), url('Modern Glass Campus at Dusk.png');
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--ivory);
+    background: linear-gradient( rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.78) ), url("Gothic Library Without a Chandelier.png");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    color: var(--white);
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+#form1 {
+    min-height: 100vh;
 }
 
 
-/* ================= MAIN CONTAINER ================= */
+/* =========================================================
+   03. MAIN CONTAINER
+========================================================= */
 
 .main-container {
-    width: 94%;
-    max-width: 1500px;
-    margin: auto;
-    padding: 25px 0 45px;
+    width: 96%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   04. BRAND HEADER
 ========================================================= */
 
-.top-navigation {
+.brand-header {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 22px;
-    margin-bottom: 45px;
-    background: rgba(224, 242, 255, 0.18);
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 50px;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 8px 25px rgba(0,25,55,0.15);
+    text-align: center;
 }
 
 
-/* BRAND */
+/* =========================================================
+   05. BRAND EMBLEM
+========================================================= */
 
-.nav-brand {
+.emblem-banner {
+    width: 100%;
+    height: 290px;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+    margin: 0;
+    background: transparent;
+}
+
+.brand-emblem {
+    width: 270px;
+    height: 270px;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+    background: transparent;
+}
+
+
+/* =========================================================
+   06. ADMITFLOW TITLE
+========================================================= */
+
+.brand-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 6vw, 82px);
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 9px;
+    line-height: 1.05;
+    color: var(--gold-light);
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9), 0 0 18px rgba(196, 154, 80, 0.25);
 }
 
-    .nav-brand img {
-        width: 34px;
-        height: 34px;
-        object-fit: contain;
-        filter: drop-shadow(0 0 8px rgba(80,190,255,0.6));
-    }
+
+/* =========================================================
+   07. SUBTITLE
+========================================================= */
+
+.brand-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 1.6vw, 20px);
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--ivory);
+    text-align: center;
+    margin: 12px 0 15px;
+}
 
 
-/* NAV LINKS */
+/* =========================================================
+   08. TAGLINE
+========================================================= */
 
-.nav-links {
+.tagline {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
+    margin: 15px auto 40px;
 }
 
-    .nav-links a {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        padding: 9px 16px;
-        border-radius: 30px;
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 500;
-        transition: all 0.3s ease;
+    .tagline span {
+        width: 100px;
+        height: 1px;
+        background: linear-gradient( to right, transparent, var(--gold) );
     }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: rgba(255,255,255,0.22);
-            box-shadow: 0 0 15px rgba(100,190,255,0.20);
+        .tagline span:last-child {
+            background: linear-gradient( to left, transparent, var(--gold) );
         }
 
-    .nav-links .login-link {
-        border: 1px solid rgba(255,255,255,0.55);
+    .tagline p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 21px;
+        font-style: italic;
+        letter-spacing: 2px;
+        color: var(--gold-light);
     }
 
 
 /* =========================================================
-   HERO SECTION
-========================================================= */
-
-.hero-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-    min-height: 260px;
-    margin-bottom: 45px;
-}
-
-
-/* LEFT HERO CARD */
-
-.hero-content {
-    max-width: 570px;
-    padding: 25px 30px;
-    background: rgba(207, 233, 255, 0.20);
-    border: 1px solid rgba(255,255,255,0.45);
-    border-radius: 15px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 12px 35px rgba(0,30,65,0.22), inset 0 1px 0 rgba(255,255,255,0.30);
-    position: relative;
-    overflow: hidden;
-}
-
-    .hero-content::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 10%;
-        width: 80%;
-        height: 1px;
-        background: linear-gradient( to right, transparent, white, transparent );
-    }
-
-
-.hero-kicker {
-    display: block;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1.4px;
-    color: #e6f6ff;
-    margin-bottom: 12px;
-}
-
-
-.hero-content h1 {
-    font-size: clamp(35px, 5vw, 60px);
-    font-weight: 800;
-    letter-spacing: -2px;
-    line-height: 1.1;
-    color: #ffffff;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.3);
-}
-
-    .hero-content h1 span {
-        color: #78d5ff;
-        text-shadow: 0 0 20px rgba(66,185,255,0.55);
-    }
-
-
-.hero-description {
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
-
-.hero-divider {
-    width: 90px;
-    height: 2px;
-    margin: 15px 0;
-    background: linear-gradient( to right, #ffffff, #59c5ff, transparent );
-    box-shadow: 0 0 10px rgba(60,180,255,0.7);
-}
-
-
-.hero-small-text {
-    font-size: 11px;
-    color: #e1f3ff;
-    letter-spacing: 0.5px;
-}
-
-
-/* RIGHT HERO */
-
-.hero-right {
-    min-height: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 15px;
-}
-
-
-.hero-quote {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: clamp(15px, 2vw, 21px);
-    font-weight: 400;
-    font-style: italic;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 0 15px rgba(255,255,255,0.25);
-}
-
-
-/* GRADUATION CAP IMAGE AREA */
-
-.cap-art {
-    width: 190px;
-    height: 160px;
-    flex-shrink: 0;
-    background-image: url('Graduation-Cap.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 0 12px rgba(120,205,255,0.55));
-    transition: 0.3s ease;
-}
-
-    .cap-art:hover {
-        transform: translateY(-5px) scale(1.04);
-        filter: drop-shadow(0 0 20px rgba(120,205,255,0.8));
-    }
-
-
-/* =========================================================
-   GLASS SECTIONS
-========================================================= */
-
-.glass-section {
-    width: 100%;
-    padding: 35px 35px;
-    margin-bottom: 25px;
-    background: rgba(213, 234, 255, 0.20);
-    border: 1px solid rgba(255,255,255,0.42);
-    border-radius: 20px;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 15px 45px rgba(3,25,54,0.24), inset 0 1px 0 rgba(255,255,255,0.25);
-    position: relative;
-    overflow: hidden;
-}
-
-
-    /* GLASS LIGHTING */
-
-    .glass-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 10%;
-        width: 80%;
-        height: 1px;
-        background: linear-gradient( to right, transparent, rgba(255,255,255,0.85), transparent );
-        pointer-events: none;
-    }
-
-
-/* =========================================================
-   SECTION HEADINGS
+   09. SECTION HEADING
 ========================================================= */
 
 .section-heading {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 35px auto 30px;
 }
 
-.section-kicker {
-    display: block;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: #c8ecff;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.section-heading h2 {
-    font-size: clamp(21px, 3vw, 27px);
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.45);
-}
-
-    .section-heading h2 i {
-        margin-right: 9px;
-        color: #63d0ff;
-        filter: drop-shadow(0 0 8px rgba(55,183,255,0.7));
+    .section-heading h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 23px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: var(--gold-light);
+        margin-bottom: 12px;
     }
 
-.section-heading p {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #e2f2ff;
-}
+    .section-heading p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        letter-spacing: 0.5px;
+    }
 
 
 /* =========================================================
-   UPLOAD GRID
+   10. DOCUMENT UPLOAD CONTAINER
 ========================================================= */
 
-.upload-grid {
+.upload-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    margin: 25px auto 30px;
 }
 
 
 /* =========================================================
-   UPLOAD CARDS
+   11. UPLOAD CARDS
 ========================================================= */
 
 .upload-card {
-    min-height: 180px;
-    padding: 22px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-width: 0;
+    padding: 25px 15px;
     text-align: center;
-    background: rgba(225,241,255,0.19);
-    border: 1px solid rgba(255,255,255,0.40);
-    border-radius: 16px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 8px 25px rgba(0,30,65,0.16), inset 0 1px 0 rgba(255,255,255,0.18);
-    transition: all 0.35s ease;
+    background: rgba(8, 7, 6, 0.88);
+    border: 1px solid rgba(196, 154, 80, 0.45);
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
     .upload-card:hover {
-        transform: translateY(-6px);
-        background: rgba(220,242,255,0.30);
-        border-color: rgba(255,255,255,0.75);
-        box-shadow: 0 12px 30px rgba(0,112,220,0.25), 0 0 20px rgba(71,184,255,0.20);
+        border-color: var(--gold-light);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.65), 0 0 10px rgba(196, 154, 80, 0.15);
     }
 
 
 /* UPLOAD ICON */
 
 .upload-icon {
-    font-size: 30px;
-    color: #7bd5ff;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 9px rgba(51,175,255,0.65));
-    transition: 0.3s ease;
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 17px;
 }
 
-.upload-card:hover .upload-icon {
-    transform: scale(1.12);
-    color: #ffffff;
-}
 
+/* UPLOAD TITLE */
 
 .upload-card h3 {
-    font-size: 13px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
     font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 5px;
+    letter-spacing: 1px;
+    color: var(--gold-light);
+    margin-bottom: 12px;
 }
 
 .upload-card p {
-    font-size: 10px;
-    color: #d6eaff;
-    margin-bottom: 14px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   FILE INPUT
+   12. FILE UPLOAD
 ========================================================= */
 
 .file-input {
     width: 100%;
-    max-width: 270px;
+    max-width: 100%;
     font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    color: #ffffff;
+    font-size: 11px;
+    color: var(--text-light);
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid var(--gold-dark);
+    border-radius: 4px;
+    padding: 9px;
 }
 
     .file-input::file-selector-button {
-        padding: 8px 12px;
-        margin-right: 7px;
-        background: rgba(12,91,157,0.48);
-        color: #ffffff;
-        border: 1px solid rgba(160,218,255,0.65);
-        border-radius: 8px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 10px;
+        background: var(--gold-dark);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 7px 10px;
+        margin-right: 8px;
         cursor: pointer;
-        backdrop-filter: blur(8px);
-        transition: all 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
     }
 
         .file-input::file-selector-button:hover {
-            background: rgba(27,142,222,0.85);
-            border-color: #ffffff;
-            box-shadow: 0 0 15px rgba(61,176,255,0.4);
+            background: var(--gold);
         }
 
 
 /* =========================================================
-   SCAN BUTTON
+   13. BUTTON CONTAINER
 ========================================================= */
 
-.scan-button-container {
+.button-container {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    align-items: center;
+    gap: 20px;
+    margin: 35px auto;
 }
-
-.scan-button {
-    min-width: 280px;
-    padding: 15px 35px;
-    background: linear-gradient( 110deg, #0877d5, #20a9f5, #0877d5 );
-    background-size: 200% auto;
-    color: #ffffff;
-    border: 1px solid rgba(255,255,255,0.75);
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    box-shadow: 0 7px 22px rgba(0,117,220,0.35), 0 0 18px rgba(52,177,255,0.25);
-    transition: all 0.35s ease;
-}
-
-    .scan-button:hover {
-        transform: translateY(-4px) scale(1.03);
-        background-position: right center;
-        box-shadow: 0 10px 30px rgba(0,137,255,0.5), 0 0 25px rgba(80,195,255,0.45);
-    }
-
-    .scan-button:active {
-        transform: scale(0.98);
-    }
 
 
 /* =========================================================
-   SCAN STATUS
+   14. SCAN AND SAVE BUTTONS
+========================================================= */
+
+.scan-button,
+.save-button {
+    display: inline-block;
+    padding: 14px 35px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #100d08;
+    background: linear-gradient( 135deg, var(--gold-light), var(--gold), var(--gold-dark) );
+    border: 1px solid var(--gold-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .scan-button:hover,
+    .save-button:hover {
+        color: white;
+        background: linear-gradient( 135deg, #d8b46c, #96703b );
+        box-shadow: 0 5px 20px rgba(196, 154, 80, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .scan-button:active,
+    .save-button:active {
+        transform: translateY(0);
+    }
+
+.save-container {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   15. SCAN STATUS
 ========================================================= */
 
 .scan-status {
+    display: block;
     text-align: center;
-    margin-top: 20px;
-}
-
-.scan-status-label {
-    display: inline-block;
-    padding: 9px 20px;
-    background: rgba(7,35,68,0.42);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 30px;
-    color: #d9f1ff;
-    font-size: 11px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin: 20px auto;
 }
 
 
 /* =========================================================
-   THREE PANELS - ONE ROW
+   16. THREE INFORMATION PANELS
 ========================================================= */
 
-.details-panels {
+.panels-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
     align-items: stretch;
-    margin-top: 30px;
-}
-
-.details-panel {
-    min-width: 0;
+    gap: 22px;
     width: 100%;
+    margin: 40px auto;
 }
 
-    .details-panel .glass-section {
-        height: 100%;
-        margin-bottom: 0;
-        padding: 28px 20px;
+
+/* PANEL */
+
+.panel {
+    width: 100%;
+    min-width: 0;
+    padding: 25px 22px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), inset 0 0 20px rgba(196, 154, 80, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+    .panel:hover {
+        border-color: var(--gold-light);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 12px rgba(196, 154, 80, 0.12);
     }
 
 
 /* =========================================================
-   STUDENT PHOTO
+   17. PANEL HEADING
+========================================================= */
+
+.panel-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--gold-dark);
+}
+
+    .panel-heading i {
+        font-size: 20px;
+        color: var(--gold);
+    }
+
+    .panel-heading h3 {
+        font-family: 'Cinzel', serif;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        color: var(--gold-light);
+    }
+
+
+/* =========================================================
+   18. STUDENT PHOTO
 ========================================================= */
 
 .student-photo-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto 28px;
-}
-
-.student-photo-frame {
-    width: 125px;
-    height: 145px;
-    padding: 5px;
-    background: rgba(225,241,255,0.18);
-    border: 1px solid rgba(255,255,255,0.65);
-    border-radius: 13px;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 8px 25px rgba(0,30,65,0.25), 0 0 20px rgba(71,184,255,0.20);
+    margin-bottom: 22px;
 }
 
 .student-photo {
-    width: 100%;
-    height: 100%;
+    width: 140px;
+    height: 165px;
     object-fit: cover;
-    border-radius: 9px;
-}
-
-.photo-caption {
-    margin-top: 10px;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    color: #d9f1ff;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 
 /* =========================================================
-   FORM GRID
+   19. FORM GRID
 ========================================================= */
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px 15px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    min-width: 0;
 }
 
-    .form-group label {
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        color: #e9f7ff;
-    }
-
-
-    /* =========================================================
-   INPUT FIELDS
-========================================================= */
-
-    .form-group input[type="text"],
-    .form-group input[type="date"],
-    .form-group input[type="number"],
-    .form-group input[type="email"],
-    .form-group textarea,
-    .form-group select {
-        width: 100%;
-        min-height: 43px;
-        padding: 11px 13px;
-        background: var(--input-bg);
-        border: 1px solid rgba(210,235,255,0.35);
-        border-radius: 9px;
-        outline: none;
-        color: #ffffff;
-        font-family: 'Poppins', sans-serif;
-        font-size: 11px;
-        transition: all 0.3s ease;
-    }
-
-    .form-group textarea {
-        resize: vertical;
-        min-height: 85px;
-    }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: #70ceff;
-            background: rgba(8,48,88,0.58);
-            box-shadow: 0 0 0 3px rgba(61,172,255,0.12), 0 0 15px rgba(61,172,255,0.18);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #b7d2e9;
-        }
-
-    .form-group input[type="date"] {
-        color-scheme: dark;
-    }
-
-    .form-group select option {
-        background: #102d4c;
-        color: #ffffff;
-    }
+.full-width {
+    grid-column: 1 / -1;
+}
 
 
 /* =========================================================
-   RADIO BUTTONS
+   20. FORM LABELS
 ========================================================= */
+
+label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--gold-light);
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   21. INPUT FIELDS
+========================================================= */
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--ivory);
+    background: var(--input-bg);
+    border: 1px solid rgba(196, 154, 80, 0.45);
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: var(--gold-light);
+        box-shadow: 0 0 8px rgba(196, 154, 80, 0.25);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #9b8b70;
+    }
+
+    select option {
+        background: #17120d;
+        color: var(--ivory);
+    }
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   22. CATEGORY RADIO BUTTONS
+========================================================= */
+
+.category-section {
+    margin-top: 15px;
+}
 
 .radio-group {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 12px;
-    padding: 10px 0;
+    margin: 15px 0 10px;
 }
 
     .radio-group input[type="radio"] {
-        accent-color: #35aaff;
+        accent-color: var(--gold);
         margin-right: 5px;
     }
 
     .radio-group label {
         display: inline-flex;
         align-items: center;
-        color: #eaf6ff;
-        font-size: 11px;
-        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: var(--text-light);
+        margin: 0;
     }
 
 
 /* =========================================================
-   ACADEMIC DETAILS
+   23. ACADEMIC CARDS
 ========================================================= */
 
-.academic-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.academic-card {
+    padding: 18px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(196, 154, 80, 0.3);
+    border-radius: 4px;
 }
 
-.academic-box {
-    padding: 20px;
-    background: rgba(9,38,69,0.30);
-    border: 1px solid rgba(255,255,255,0.30);
-    border-radius: 13px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-    .academic-box h3 {
-        text-align: center;
+    .academic-card h4 {
+        font-family: 'Cinzel', serif;
         font-size: 14px;
         font-weight: 600;
-        letter-spacing: 0.5px;
-        color: #ffffff;
-        padding-bottom: 15px;
-        margin-bottom: 18px;
-        border-bottom: 1px solid rgba(255,255,255,0.25);
-    }
-
-        .academic-box h3 i {
-            color: #63d0ff;
-            margin-right: 6px;
-        }
-
-    .academic-box .form-group {
+        color: var(--gold-light);
         margin-bottom: 17px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--gold-dark);
     }
 
-        .academic-box .form-group:last-child {
-            margin-bottom: 0;
+        .academic-card h4 i {
+            color: var(--gold);
+            margin-right: 7px;
         }
-
-.session-field {
-    margin-top: 25px;
-}
 
 
 /* =========================================================
-   SAVE BUTTON
+   24. GRADUATION CONTENT
 ========================================================= */
 
-.save-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+.graduation-content {
+    width: 100%;
 }
 
-.save-button {
+    .graduation-content .academic-card {
+        margin-bottom: 22px;
+    }
+
+
+/* =========================================================
+   25. FOOTER
+========================================================= */
+
+.footer {
     width: 100%;
-    padding: 13px 18px;
-    background: rgba(13,111,190,0.35);
-    color: #ffffff;
-    border: 1px solid rgba(120,210,255,0.75);
-    border-radius: 50px;
+    padding: 25px 10px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid rgba(196, 154, 80, 0.35);
+}
+
+    .footer p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        letter-spacing: 1px;
+        color: var(--gold-light);
+        margin-bottom: 10px;
+    }
+
+.footer-divider {
+    color: var(--gold-dark);
+    margin: 0 8px;
+}
+
+.footer-copyright {
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-    .save-button:hover {
-        background: linear-gradient( 110deg, #0877d5, #20a9f5 );
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(35,160,255,0.35);
-    }
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.page-footer {
-    text-align: center;
-    margin-top: 45px;
-    padding: 18px;
-    color: #d9efff;
-    font-size: 11px;
-    border-top: 1px solid rgba(255,255,255,0.20);
-}
-
-    .page-footer i {
-        color: #65caff;
-        margin-right: 5px;
-    }
-
-
-/* =========================================================
-   RESPONSIVE DESIGN
-========================================================= */
-
-@media screen and (max-width: 1100px) {
-
-    .details-panels {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .upload-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-@media screen and (max-width: 750px) {
-
-    .hero-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-right {
-        justify-content: center;
-        min-height: 150px;
-    }
-
-    .details-panels {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media screen and (max-width: 600px) {
-
-    body {
-        background-attachment: scroll;
-        background-position: center;
-    }
-
-    .main-container {
-        width: 94%;
-        padding-top: 15px;
-    }
-
-    .top-navigation {
-        flex-direction: column;
-        gap: 12px;
-        border-radius: 18px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-        .nav-links a {
-            padding: 8px 10px;
-            font-size: 10px;
-        }
-
-    .hero-content {
-        padding: 22px 18px;
-    }
-
-    .hero-kicker {
-        font-size: 8px;
-    }
-
-    .hero-content h1 {
-        font-size: 38px;
-    }
-
-    .hero-description {
-        font-size: 11px;
-    }
-
-    .hero-quote {
-        font-size: 16px;
-    }
-
-    .cap-art {
-        width: 125px;
-        height: 125px;
-    }
-
-    .glass-section {
-        padding: 25px 17px;
-        border-radius: 16px;
-    }
-
-    .section-heading h2 {
-        font-size: 20px;
-    }
-
-    .section-heading p {
-        font-size: 11px;
-    }
-
-    .upload-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .upload-card {
-        min-height: 165px;
-    }
-
-    .scan-button {
-        width: 100%;
-        min-width: unset;
-    }
+    letter-spacing: 2px;
+    color: var(--text-muted);
 }
 
 
 /* =========================================================
-   SCROLLBAR
+   26. SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(7,29,54,0.8);
+    background: #090807;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient( 180deg, #58caff, #0877d5 );
+    background: var(--gold-dark);
     border-radius: 10px;
 }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #8cddff;
+        background: var(--gold);
     }
 
 
 /* =========================================================
-   TEXT SELECTION
+   27. TEXT SELECTION
 ========================================================= */
 
 ::selection {
-    background: #36aaff;
-    color: #ffffff;
+    color: #100d08;
+    background: var(--gold-light);
 }
 
 
 /* =========================================================
-   REDUCED MOTION
+   28. LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .panels-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .upload-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .brand-emblem {
+        width: 245px;
+        height: 245px;
+    }
+
+    .emblem-banner {
+        height: 265px;
+    }
+}
+
+
+/* =========================================================
+   29. SMALL TABLETS
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .panels-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .upload-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   30. MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .main-container {
+        width: 100%;
+        padding: 0 12px 30px;
+    }
+
+    .emblem-banner {
+        height: 220px;
+        padding-top: 5px;
+    }
+
+    .brand-emblem {
+        width: 205px;
+        height: 205px;
+    }
+
+    .brand-title {
+        font-size: 48px;
+        letter-spacing: 5px;
+        margin-top: 10px;
+    }
+
+    .brand-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+        .tagline span {
+            width: 35px;
+        }
+
+        .tagline p {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .upload-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .panels-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .panel {
+        padding: 22px 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .scan-button,
+    .save-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   31. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-emblem {
+        width: 180px;
+        height: 180px;
+    }
+
+    .emblem-banner {
+        height: 195px;
+    }
+
+    .brand-title {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+
+    .brand-subtitle {
+        font-size: 10px;
+    }
+
+    .tagline p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   32. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -929,6 +822,7 @@ body {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
 

@@ -5,24 +5,19 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head runat="server">
-
-    <title>AdmitFlow | Student Admission & Records Management</title>
-
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="Admit_Scan.css?v=3" rel="stylesheet" />
+    <title>ADMITFLOW | Student Admission & Records Management</title>
 
-    <!-- Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="Admit_Scan.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Special+Elite&display=swap"
         rel="stylesheet" />
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -31,130 +26,44 @@
 
     <div class="main-container">
 
-        <!-- ================= NAVIGATION ================= -->
+        <!-- ================= HEADER ================= -->
 
-        <nav class="top-navigation">
+        <header class="main-header">
 
-            <a href="#" class="nav-brand">
+            <div class="emblem-banner">
                 <img src="AdmitFlow_Emblem1-Photoroom.png"
-                    alt="AdmitFlow Logo" />
-
-                <span>AdmitFlow</span>
-            </a>
-
-            <div class="nav-links">
-
-                <a href="#" class="active">
-                    <i class="fa-solid fa-house"></i> Home
-                </a>
-
-                <a href="#about">
-                    <i class="fa-solid fa-circle-info"></i> About
-                </a>
-
-                <a href="#upload">
-                    <i class="fa-solid fa-circle-question"></i> Help
-                </a>
-
-                <a href="#upload" class="login-link">
-                    <i class="fa-solid fa-user"></i> Login
-                </a>
-
+                     class="brand-emblem"
+                     alt="AdmitFlow Royal Emblem" />
             </div>
 
-        </nav>
+            <h1 class="brand-title">ADMITFLOW</h1>
 
+            <h2 class="brand-subtitle">
+                STUDENT ADMISSION & RECORDS MANAGEMENT SYSTEM
+            </h2>
 
-        <!-- ================= HERO SECTION ================= -->
-
-        <header class="hero-section">
-
-            <!-- LEFT HERO CARD -->
-
-            <div class="hero-content">
-
-                <span class="hero-kicker">
-                    STUDENT ADMISSION & RECORDS MANAGEMENT SYSTEM
-                </span>
-
-                <h1>
-                    Admit<span>Flow</span>
-                </h1>
-
-                <p class="hero-description">
-                    Upload &nbsp;•&nbsp; Scan &nbsp;•&nbsp;
-                    Verify &nbsp;•&nbsp; Confirm
-                </p>
-
-                <div class="hero-divider"></div>
-
-                <p class="hero-small-text">
-                    Your Documents. Our Precision.
-                </p>
-
-            </div>
-
-
-            <!-- RIGHT HERO QUOTE -->
-
-            <div class="hero-right">
-
-                <div class="hero-quote">
-
-                    <span>
-                        “Dream Big...
-                    </span>
-
-                    <span>
-                        Apply Smart...”
-                    </span>
-
-                </div>
-
-
-                <!-- GRADUATION CAP IMAGE SPACE -->
-
-                <div class="cap-art" aria-label="Graduation Cap Illustration">
-
-                    <!-- Add your graduation cap image later.
-                         Example filename: Graduation-Cap.png -->
-
-                </div>
-
+            <div class="tagline">
+                <span></span>
+                <p>Simplifying Admissions. Automating Verification.</p>
+                <span></span>
             </div>
 
         </header>
 
 
+        <!-- ================= DOCUMENT UPLOAD SECTION ================= -->
 
-        <!-- ================= DOCUMENT UPLOAD ================= -->
-
-        <section class="glass-section upload-section" id="upload">
+        <section class="upload-section">
 
             <div class="section-heading">
-
-                <span class="section-kicker">
-                    DOCUMENT VERIFICATION
-                </span>
-
-                <h2>
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    Upload Documents
-                </h2>
-
-                <p>
-                    Upload the required documents to extract student information.
-                </p>
-
+                <h2>DOCUMENT VERIFICATION</h2>
+                <p>Upload the required documents to extract student information.</p>
             </div>
 
 
-            <!-- UPLOAD CARDS -->
-
             <div class="upload-grid">
 
-
-                <!-- AADHAAR -->
+                <!-- Aadhaar Front -->
 
                 <div class="upload-card">
 
@@ -162,19 +71,40 @@
                         <i class="fa-solid fa-id-card"></i>
                     </div>
 
-                    <h3>Aadhaar Card</h3>
+                    <h3>AADHAAR FRONT</h3>
 
-                    <p>Identity Verification</p>
+                    <p>Student name, DOB and Aadhaar number</p>
 
                     <asp:FileUpload ID="FileUpload1"
                         runat="server"
-                        CssClass="file-input" />
+                        CssClass="file-upload"
+                        accept=".jpg,.jpeg,.png" />
+
+                    <small>Required | JPG, JPEG, PNG</small>
+
+
+                    <div class="upload-icon">
+    <i class="fa-solid fa-address-card"></i>
+</div>
+
+<h3>AADHAAR BACK</h3>
+
+<p>Student residential address</p>
+
+<asp:FileUpload ID="FileUpload2"
+    runat="server"
+    CssClass="file-upload"
+    accept=".jpg,.jpeg,.png" />
+
+<small>Required | JPG, JPEG, PNG</small>
 
                 </div>
 
 
+                
 
-                <!-- STUDENT PHOTO -->
+
+                <!-- Student Photograph -->
 
                 <div class="upload-card">
 
@@ -182,59 +112,43 @@
                         <i class="fa-solid fa-user"></i>
                     </div>
 
-                    <h3>Student Photo</h3>
+                    <h3>STUDENT PHOTOGRAPH</h3>
 
-                    <p>Recent Passport Size Photo</p>
-
-                    <asp:FileUpload ID="FileUpload2"
-                        runat="server"
-                        CssClass="file-input" />
-
-                </div>
-
-
-
-                <!-- 10TH MARKSHEET -->
-
-                <div class="upload-card">
-
-                    <div class="upload-icon">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-
-                    <h3>10th Marksheet</h3>
-
-                    <p>Secondary Education</p>
+                    <p>Upload a recent student photograph</p>
 
                     <asp:FileUpload ID="FileUpload3"
                         runat="server"
-                        CssClass="file-input" />
+                        CssClass="file-upload"
+                        accept=".jpg,.jpeg,.png" />
+
+                    <small>Required | JPG, JPEG, PNG</small>
 
                 </div>
 
 
-
-                <!-- 12TH MARKSHEET -->
+                <!-- 10th Marksheet -->
 
                 <div class="upload-card">
 
                     <div class="upload-icon">
-                        <i class="fa-solid fa-file-lines"></i>
+                        <i class="fa-solid fa-certificate"></i>
                     </div>
 
-                    <h3>12th Marksheet</h3>
+                    <h3>10TH MARKSHEET</h3>
 
-                    <p>Senior Secondary Education</p>
+                    <p>Academic details and parent names</p>
 
                     <asp:FileUpload ID="FileUpload4"
                         runat="server"
-                        CssClass="file-input" />
+                        CssClass="file-upload"
+                        accept=".jpg,.jpeg,.png,.pdf" />
+
+                    <small>Required | JPG, JPEG, PNG, PDF</small>
 
                 </div>
 
 
-
-                <!-- GRADUATION -->
+                <!-- 12th Marksheet -->
 
                 <div class="upload-card">
 
@@ -242,39 +156,65 @@
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
 
-                    <h3>Graduation Marksheet</h3>
+                    <h3>12TH MARKSHEET</h3>
 
-                    <p>Higher Education</p>
+                    <p>Academic details and parent names</p>
 
                     <asp:FileUpload ID="FileUpload5"
                         runat="server"
-                        CssClass="file-input" />
+                        CssClass="file-upload"
+                        accept=".jpg,.jpeg,.png,.pdf" />
+
+                    <small>Required | JPG, JPEG, PNG, PDF</small>
+
+                </div>
+
+
+                <!-- Graduation Marksheet -->
+
+                <div class="upload-card">
+
+                    <div class="upload-icon">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+
+                    <h3>GRADUATION MARKSHEET</h3>
+
+                    <p>University, college and graduation details</p>
+
+                    <asp:FileUpload ID="FileUpload6"
+                        runat="server"
+                        CssClass="file-upload"
+                        accept=".jpg,.jpeg,.png,.pdf" />
+
+                    <small>Optional | JPG, JPEG, PNG, PDF</small>
 
                 </div>
 
             </div>
 
 
-
-            <!-- SCAN BUTTON -->
+            <!-- Scan Button -->
 
             <div class="scan-button-container">
 
                 <asp:Button ID="BtnScan"
                     runat="server"
                     Text="SCAN DOCUMENTS"
-                    CssClass="scan-button" OnClick="BtnScan_Click1" />
+                    CssClass="scan-button"
+                    OnClick="BtnScan_Click1" />
 
             </div>
 
 
-            <!-- SCAN STATUS -->
+            <!-- Scan Status -->
 
-            <div class="scan-status">
+            <div class="status-container">
 
                 <asp:Label ID="LblScanStatus"
                     runat="server"
-                    CssClass="scan-status-label">
+                    CssClass="scan-status"
+                    EnableViewState="false">
                 </asp:Label>
 
             </div>
@@ -282,440 +222,394 @@
         </section>
 
 
+        <!-- ================= RESULT PANELS ================= -->
 
-        <!-- ================================================= -->
-        <!-- THREE STUDENT INFORMATION PANELS                  -->
-        <!-- ================================================= -->
+        <section class="results-section">
 
-        <div class="details-panels">
+            <div class="section-heading">
+                <h2>VERIFIED STUDENT INFORMATION</h2>
+                <p>Extracted information will appear below after document scanning.</p>
+            </div>
 
 
-            <!-- ============================================= -->
-            <!-- PANEL 1: STUDENT DETAILS                     -->
-            <!-- ============================================= -->
+            <div class="panels-container">
 
-            <asp:Panel ID="pnlStudentDetails"
-                runat="server"
-                CssClass="details-panel"
-                Visible="false">
 
-                <section class="glass-section details-section">
+                <!-- ========================================= -->
+                <!-- PANEL 1 : STUDENT DETAILS -->
+                <!-- ========================================= -->
 
-                    <div class="section-heading">
+                <asp:Panel ID="pnlStudentDetails"
+                    runat="server"
+                    CssClass="panel"
+                    Visible="false">
 
-                        <span class="section-kicker">
-                            PERSONAL INFORMATION
-                        </span>
-
-                        <h2>
-                            <i class="fa-solid fa-user-graduate"></i>
-                            Student Details
-                        </h2>
-
+                    <div class="panel-heading">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h3>STUDENT DETAILS</h3>
                     </div>
 
 
-                    <!-- STUDENT PHOTO -->
+                    <!-- Student Photo -->
 
                     <div class="student-photo-container">
 
-                        <div class="student-photo-frame">
-
-                            <asp:Image ID="ImgStudentPhoto"
-                                runat="server"
-                                CssClass="student-photo"
-                                AlternateText="Student Photograph" />
-
-                        </div>
-
-                        <span class="photo-caption">
-                            STUDENT PHOTOGRAPH
-                        </span>
-
-                    </div>
-
-
-                    <div class="form-grid">
-
-
-                        <div class="form-group">
-
-                            <label>Student Name</label>
-
-                            <asp:TextBox ID="TxtStudentName"
-                                runat="server"
-                                placeholder="Student Name">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Date of Birth</label>
-
-                            <asp:TextBox ID="TxtDOB"
-                                runat="server"
-                                TextMode="Date">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Aadhaar Number</label>
-
-                            <asp:TextBox ID="TxtAadhaarNo"
-                                runat="server"
-                                placeholder="Aadhaar Number">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Father's Name</label>
-
-                            <asp:TextBox ID="TxtFatherName"
-                                runat="server"
-                                placeholder="Father's Name">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Mother's Name</label>
-
-                            <asp:TextBox ID="TxtMotherName"
-                                runat="server"
-                                placeholder="Mother's Name">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Contact Number</label>
-
-                            <asp:TextBox ID="TxtContNumber"
-                                runat="server"
-                                placeholder="Contact Number">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Address</label>
-
-                            <asp:TextBox ID="TxtAddress"
-                                runat="server"
-                                TextMode="MultiLine"
-                                Rows="3"
-                                placeholder="Student Address">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <!-- CATEGORY -->
-
-                        <div class="form-group">
-
-                            <label>Category</label>
-
-                            <div class="radio-group">
-
-                                <asp:RadioButton ID="RadioButton1"
-                                    runat="server"
-                                    GroupName="Category"
-                                    Text="SC" />
-
-                                <asp:RadioButton ID="RadioButton2"
-                                    runat="server"
-                                    GroupName="Category"
-                                    Text="ST" />
-
-                                <asp:RadioButton ID="RadioButton3"
-                                    runat="server"
-                                    GroupName="Category"
-                                    Text="OBC" />
-
-                                <asp:RadioButton ID="RadioButton4"
-                                    runat="server"
-                                    GroupName="Category"
-                                    Text="Other" />
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </section>
-
-            </asp:Panel>
-
-
-
-            <!-- ============================================= -->
-            <!-- PANEL 2: STUDENT MARKSHEET                    -->
-            <!-- ============================================= -->
-
-            <asp:Panel ID="pnlStudentMarksheet"
-                runat="server"
-                CssClass="details-panel"
-                Visible="false">
-
-                <section class="glass-section details-section">
-
-                    <div class="section-heading">
-
-                        <span class="section-kicker">
-                            ACADEMIC INFORMATION
-                        </span>
-
-                        <h2>
-                            <i class="fa-solid fa-book-open"></i>
-                            Student Marksheet
-                        </h2>
-
-                    </div>
-
-
-                    <div class="academic-container">
-
-
-                        <!-- 10TH -->
-
-                        <div class="academic-box">
-
-                            <h3>
-                                <i class="fa-solid fa-award"></i>
-                                10th Standard
-                            </h3>
-
-
-                            <div class="form-group">
-
-                                <label>Passing Year</label>
-
-                                <asp:TextBox ID="Txt10year"
-                                    runat="server"
-                                    placeholder="Passing Year">
-                                </asp:TextBox>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label>Percentage</label>
-
-                                <asp:TextBox ID="Txt10percentage"
-                                    runat="server"
-                                    placeholder="Percentage">
-                                </asp:TextBox>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- 12TH -->
-
-                        <div class="academic-box">
-
-                            <h3>
-                                <i class="fa-solid fa-award"></i>
-                                12th Standard
-                            </h3>
-
-
-                            <div class="form-group">
-
-                                <label>Passing Year</label>
-
-                                <asp:TextBox ID="Txt12year"
-                                    runat="server"
-                                    placeholder="Passing Year">
-                                </asp:TextBox>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label>Percentage</label>
-
-                                <asp:TextBox ID="Txt12percentage"
-                                    runat="server"
-                                    placeholder="Percentage">
-                                </asp:TextBox>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- ADMISSION SESSION -->
-
-                    <div class="form-group session-field">
-
-                        <label>Admission Session</label>
-
-                        <asp:TextBox ID="TxtSession"
+                        <asp:Image ID="ImgStudentPhoto"
                             runat="server"
-                            placeholder="Example: 2026-2027">
+                            CssClass="student-photo"
+                            AlternateText="Student Photograph" />
+
+                    </div>
+
+
+                    <!-- Student Name -->
+
+                    <div class="form-group">
+
+                        <label>Student Name</label>
+
+                        <asp:TextBox ID="TxtStudentName"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
                         </asp:TextBox>
 
                     </div>
 
 
-                </section>
+                    <!-- Date of Birth -->
 
-            </asp:Panel>
+                    <div class="form-group">
 
+                        <label>Date of Birth</label>
 
-
-            <!-- ============================================= -->
-            <!-- PANEL 3: GRADUATION DETAILS                   -->
-            <!-- ============================================= -->
-
-            <asp:Panel ID="pnlGraduationDetails"
-                runat="server"
-                CssClass="details-panel"
-                Visible="false">
-
-                <section class="glass-section details-section">
-
-                    <div class="section-heading">
-
-                        <span class="section-kicker">
-                            HIGHER EDUCATION
-                        </span>
-
-                        <h2>
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            Graduation Details
-                        </h2>
-
-                    </div>
-
-
-                    <div class="form-grid">
-
-
-                        <div class="form-group">
-
-                            <label>University Name</label>
-
-                            <asp:TextBox ID="TxtUniversity"
-                                runat="server"
-                                placeholder="University Name">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>College Name</label>
-
-                            <asp:TextBox ID="TxtCollegeName"
-                                runat="server"
-                                placeholder="College Name">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>CGPA / Percentage</label>
-
-                            <asp:TextBox ID="TxtCGPA"
-                                runat="server"
-                                placeholder="CGPA / Percentage">
-                            </asp:TextBox>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-
-                            <label>Degree Passing Year</label>
-
-                            <asp:TextBox ID="TxtDegreeYear"
-                                runat="server"
-                                placeholder="Passing Year">
-                            </asp:TextBox>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <!-- SAVE BUTTON -->
-
-                    <div class="save-button-container">
-
-                        <asp:Button ID="BtnSave"
+                        <asp:TextBox ID="TxtDOB"
                             runat="server"
-                            Text="SAVE STUDENT RECORD"
-                            CssClass="save-button" />
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
 
                     </div>
 
 
-                </section>
+                    <!-- Aadhaar Number -->
 
-            </asp:Panel>
+                    <div class="form-group">
 
+                        <label>Aadhaar Number</label>
+
+                        <asp:TextBox ID="TxtAadhaarNo"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Father's Name -->
+
+                    <div class="form-group">
+
+                        <label>Father's Name</label>
+
+                        <asp:TextBox ID="TxtFatherName"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Mother's Name -->
+
+                    <div class="form-group">
+
+                        <label>Mother's Name</label>
+
+                        <asp:TextBox ID="TxtMotherName"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Contact Number -->
+
+                    <div class="form-group">
+
+                        <label>Contact Number</label>
+
+                        <asp:TextBox ID="TxtContNumber"
+                            runat="server"
+                            CssClass="form-control"
+                            MaxLength="10"
+                            TextMode="Phone"
+                            placeholder="Enter 10-digit mobile number">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="form-group">
+
+                        <label>Residential Address</label>
+
+                        <asp:TextBox ID="TxtAddress"
+                            runat="server"
+                            CssClass="form-control"
+                            TextMode="MultiLine"
+                            Rows="3"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Category -->
+
+                    <div class="form-group">
+
+                        <label>Category</label>
+
+                        <div class="category-options">
+
+                            <asp:RadioButton ID="RadioButton1"
+                                runat="server"
+                                Text=" SC"
+                                GroupName="Category" />
+
+                            <asp:RadioButton ID="RadioButton2"
+                                runat="server"
+                                Text=" ST"
+                                GroupName="Category" />
+
+                            <asp:RadioButton ID="RadioButton3"
+                                runat="server"
+                                Text=" OBC"
+                                GroupName="Category" />
+
+                            <asp:RadioButton ID="RadioButton4"
+                                runat="server"
+                                Text=" Other"
+                                GroupName="Category" />
+
+                        </div>
+
+                    </div>
+
+                </asp:Panel>
+
+
+
+                <!-- ========================================= -->
+                <!-- PANEL 2 : ACADEMIC DETAILS -->
+                <!-- ========================================= -->
+
+                <asp:Panel ID="pnlStudentMarksheet"
+                    runat="server"
+                    CssClass="panel"
+                    Visible="false">
+
+                    <div class="panel-heading">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h3>ACADEMIC DETAILS</h3>
+                    </div>
+
+
+                    <!-- 10th Details -->
+
+                    <div class="sub-panel-heading">
+                        <h4>10TH STANDARD</h4>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Passing Year</label>
+
+                        <asp:TextBox ID="Txt10year"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Percentage</label>
+
+                        <asp:TextBox ID="Txt10percentage"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- 12th Details -->
+
+                    <div class="sub-panel-heading">
+                        <h4>12TH STANDARD</h4>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Passing Year</label>
+
+                        <asp:TextBox ID="Txt12year"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Percentage</label>
+
+                        <asp:TextBox ID="Txt12percentage"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <!-- Admission Session -->
+
+                    <div class="sub-panel-heading">
+                        <h4>ADMISSION INFORMATION</h4>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Admission Session</label>
+
+                        <asp:TextBox ID="TxtSession"
+                            runat="server"
+                            CssClass="form-control"
+                            placeholder="Enter admission session">
+                        </asp:TextBox>
+
+                    </div>
+
+                </asp:Panel>
+
+
+
+                <!-- ========================================= -->
+                <!-- PANEL 3 : GRADUATION DETAILS -->
+                <!-- ========================================= -->
+
+                <asp:Panel ID="pnlGraduationDetails"
+                    runat="server"
+                    CssClass="panel"
+                    Visible="false">
+
+                    <div class="panel-heading">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h3>GRADUATION DETAILS</h3>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>University</label>
+
+                        <asp:TextBox ID="TxtUniversity"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>College Name</label>
+
+                        <asp:TextBox ID="TxtCollegeName"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>CGPA / Percentage</label>
+
+                        <asp:TextBox ID="TxtCGPA"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Graduation Passing Year</label>
+
+                        <asp:TextBox ID="TxtDegreeYear"
+                            runat="server"
+                            CssClass="form-control"
+                            ReadOnly="true">
+                        </asp:TextBox>
+
+                    </div>
+
+                </asp:Panel>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SAVE BUTTON ================= -->
+
+        <div class="save-button-container">
+
+            <asp:Button ID="BtnSave"
+                runat="server"
+                Text="SAVE STUDENT RECORD"
+                CssClass="save-button" OnClick="BtnSave_Click" />
 
         </div>
 
 
         <!-- ================= FOOTER ================= -->
 
-        <footer class="page-footer" id="about">
+        <footer class="main-footer">
 
-            <p>
-                <i class="fa-solid fa-graduation-cap"></i>
-                AdmitFlow &nbsp; | &nbsp;
-                Simplifying Admissions. Automating Verification.
-            </p>
+            <p>ADMITFLOW</p>
+
+            <span>SIMPLIFYING ADMISSIONS. AUTOMATING VERIFICATION.</span>
 
         </footer>
-
 
     </div>
 
 </form>
 
 </body>
-
 </html>
