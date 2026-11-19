@@ -24,6 +24,15 @@ namespace Admit_Scan
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// ImgBrandEmblem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgBrandEmblem;
+
+        /// <summary>
         /// FileUpload1 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace Admit_Scan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblScanStatus;
+
+        /// <summary>
+        /// panelsContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelsContainer;
 
         /// <summary>
         /// pnlStudentDetails control.
@@ -177,6 +195,33 @@ namespace Admit_Scan
         protected global::System.Web.UI.WebControls.TextBox TxtAddress;
 
         /// <summary>
+        /// TxtCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCity;
+
+        /// <summary>
+        /// TxtState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtState;
+
+        /// <summary>
+        /// TxtPinCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtPinCode;
+
+        /// <summary>
         /// RadioButton1 control.
         /// </summary>
         /// <remarks>
@@ -222,6 +267,15 @@ namespace Admit_Scan
         protected global::System.Web.UI.WebControls.Panel pnlStudentMarksheet;
 
         /// <summary>
+        /// Txt10Board control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt10Board;
+
+        /// <summary>
         /// Txt10year control.
         /// </summary>
         /// <remarks>
@@ -229,6 +283,15 @@ namespace Admit_Scan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt10year;
+
+        /// <summary>
+        /// Txt10Subject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt10Subject;
 
         /// <summary>
         /// Txt10percentage control.
@@ -240,6 +303,15 @@ namespace Admit_Scan
         protected global::System.Web.UI.WebControls.TextBox Txt10percentage;
 
         /// <summary>
+        /// Txt12Board control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt12Board;
+
+        /// <summary>
         /// Txt12year control.
         /// </summary>
         /// <remarks>
@@ -247,6 +319,15 @@ namespace Admit_Scan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt12year;
+
+        /// <summary>
+        /// Txt12Subject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt12Subject;
 
         /// <summary>
         /// Txt12percentage control.
@@ -264,7 +345,7 @@ namespace Admit_Scan
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtSession;
+        protected global::System.Web.UI.WebControls.Label TxtSession;
 
         /// <summary>
         /// pnlGraduationDetails control.
